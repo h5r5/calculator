@@ -1,122 +1,77 @@
-# Modern Apple-Inspired Windows Calculator (v2.0)
+# 📱 Modern Calculator
 
-[![.NET 10.0](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6?logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-[![Design](https://img.shields.io/badge/Design-Apple%20HIG%20%26%20VisionOS-black?logo=apple&logoColor=white)](https://developer.apple.com/design/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+A lightweight, elegant Windows desktop calculator built with C# and .NET 10 Windows Forms. Inspired by Apple design and VisionOS frosted glass, featuring 8 curated themes, smooth vector icons, and an in-app theme switcher.
 
-A handcrafted, high-precision desktop calculator for Windows built with C# and .NET 10 Windows Forms, designed strictly adhering to **Apple Human Interface Guidelines (HIG)** and **VisionOS Frosted Glassmorphism**.
-
-Originally created by [@legenddohe-coder](https://github.com/legenddohe-coder/calculator) and completely redesigned with modern UI/UX, responsive fluid controls, 8 curated appearance themes, live in-app switcher, and zero emojis or blurry fonts.
+Originally created by [@legenddohe-coder](https://github.com/legenddohe-coder/calculator) and redesigned by [@h5r5](https://github.com/h5r5).
 
 ---
 
-## Highlights & Features
+## 🎨 Themes Showcase
 
-- **Apple Design & Physical Depth**:
-  - Smooth rounded squircle buttons with anti-aliased geometry and active press feedback.
-  - Optical centering for vector math glyphs (`+`, `−`, `×`, `÷`, `±`, `⌫`, `⚙`, `✕`).
-  - Native Windows 11 DWM title bar color synchronization (caption and text seamlessly blend with the active theme).
-  - VisionOS Liquid Glassmorphism with top-rim light reflection arcs.
+| Apple Dark | Apple Light | Liquid Glass | Soft Sakura |
+| :---: | :---: | :---: | :---: |
+| <img src="docs/screenshots/apple-dark.png" width="200" alt="Apple Dark" /> | <img src="docs/screenshots/apple-light.png" width="200" alt="Apple Light" /> | <img src="docs/screenshots/liquid-glass.png" width="200" alt="Liquid Glass" /> | <img src="docs/screenshots/sakura-rose.png" width="200" alt="Soft Sakura" /> |
 
-- **8 Handcrafted Premium Themes**:
-  - **Apple Dark**: Authentic macOS/iOS dark slate with vibrant orange accent.
-  - **Apple Light**: Clean studio silver with subtle borders and amber accents.
-  - **Liquid Glass**: VisionOS-inspired frosted glass aesthetic with cyan accents.
-  - **Soft Sakura**: Elegant soft rose pastel with crimson operators.
-  - **Midnight OLED**: Deep space pure black with emerald neon indicators.
-  - **Nordic Slate**: Cool Scandinavian studio slate with arctic sky blue buttons.
-  - **Obsidian Gold**: Luxurious obsidian charcoal with warm champagne gold accents.
-  - **Cyber Violet**: Vibrant neon synthwave violet with electric purple highlights.
+| Midnight OLED | Nordic Slate | Obsidian Gold | Cyber Violet |
+| :---: | :---: | :---: | :---: |
+| <img src="docs/screenshots/midnight-cyber.png" width="200" alt="Midnight OLED" /> | <img src="docs/screenshots/nordic-slate.png" width="200" alt="Nordic Slate" /> | <img src="docs/screenshots/obsidian-gold.png" width="200" alt="Obsidian Gold" /> | <img src="docs/screenshots/electric-violet.png" width="200" alt="Cyber Violet" /> |
 
-- **In-App Live Theme Switcher**:
-  - Seamless in-app slide-over panel — **no jarring separate OS popup windows**.
-  - Dynamic 2-column preview cards with color palette swatches and vector checkmark indicators.
-  - Instant live preview and persistent JSON storage (`theme_settings.json`).
+<br/>
 
-- **Calculator Engine**:
-  - Immediate chaining arithmetic calculations (`7 + 5 × 2`).
-  - Division-by-zero protection.
-  - History expression tracker above large formatted result display.
-  - Full keyboard numpad integration with keyboard shortcuts.
+<p align="center">
+  <img src="docs/screenshots/themes-overlay.png" width="280" alt="In-App Themes Switcher" />
+  <br/>
+  <b>Built-in In-App Theme Switcher (No popup windows)</b>
+</p>
 
 ---
 
-## Keyboard Shortcuts
+## ✨ Features
 
-| Key | Action |
+- **8 Handcrafted Themes**: Classic Dark, Silver Light, Liquid Glass, Sakura, OLED, Nordic, Gold, and Cyberpunk.
+- **In-App Switcher**: Switch themes seamlessly inside the window with live previews.
+- **Apple-Inspired Design**: Fluid circular buttons (`70×70px`) with vector math glyphs and optical alignment.
+- **Windows 11 Native Sync**: Title bar color automatically matches your active theme.
+- **Full Keyboard Support**: Seamless Numpad, Enter, Backspace, and Escape navigation.
+- **Standalone Portable App**: Single `.exe` binary that runs everywhere with zero dependencies.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Function |
 | :--- | :--- |
-| `0` - `9` / `Numpad 0` - `Numpad 9` | Input Digits |
-| `.` / `Numpad .` | Decimal Point |
-| `+`, `-`, `*`, `/` | Arithmetic Operators (`+`, `−`, `×`, `÷`) |
+| `0` – `9` / `Numpad` | Digits |
+| `+` `−` `×` `÷` | Arithmetic Operators |
 | `Enter` / `=` | Calculate Result |
 | `Backspace` | Delete last digit |
-| `Esc` | Clear (AC) / Dismiss Themes Overlay |
+| `Esc` | Clear (AC) / Close Themes Menu |
 
 ---
 
-## Quick Start & Running from Source
+## 🚀 How to Run
 
-### Prerequisites
-- [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) (or higher)
-- Windows 10 (1809+) or Windows 11
+### Option 1: Standalone Download
+Download the latest portable `calculator.exe` directly from the [Releases](https://github.com/h5r5/calculator/releases) tab. No installation required.
 
-### Run with .NET CLI:
+### Option 2: Run from Source
+Requires [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0):
+
 ```powershell
-# Clone the repository
-git clone https://github.com/legenddohe-coder/calculator.git
+git clone https://github.com/h5r5/calculator.git
 cd calculator
-
-# Run the app
 dotnet run --project calculator
 ```
 
----
-
-## Building a Standalone Release (.exe)
-
-You can build a single-file, self-contained executable that runs on any 64-bit Windows machine **without requiring .NET runtime installed**:
-
+To build a standalone single-file `.exe` locally:
 ```powershell
-# Using the provided publish script:
 .\publish.ps1
 ```
 
-Or manually using the .NET CLI:
-```powershell
-dotnet publish calculator\calculator.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true -o ./release
-```
-The resulting standalone binary will be created in `./release/calculator.exe`.
-
 ---
 
-## Project Structure
-
-```text
-calculator/
-├── .github/
-│   └── workflows/
-│       └── release.yml        # Automated CI/CD release workflow
-├── calculator/
-│   ├── calculator.csproj      # .NET 10 WinForms project configuration
-│   ├── Form1.cs               # Main calculator logic & event handlers
-│   ├── Form1.Designer.cs      # Layout, controls & overlay hierarchy
-│   ├── ModernButton.cs        # Apple-style custom button with vector glyphs
-│   ├── Theme.cs               # Color definitions for all 8 themes
-│   ├── ThemeCardButton.cs     # Theme preview cards with swatches & indicators
-│   ├── ThemeManager.cs        # Theme state manager & JSON persistence
-│   └── Program.cs             # Application entry point
-├── publish.ps1                # One-click portable release builder
-├── RELEASE_NOTES.md           # Version release notes
-└── README.md                  # Project documentation
-```
-
----
-
-## Credits & Acknowledgments
+## 👥 Credits
 
 - **Original Project**: [@legenddohe-coder](https://github.com/legenddohe-coder/calculator)
-- **UI/UX Modernization & Redesign**: Inspired by Apple Human Interface Guidelines and VisionOS design language.
-- **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute.
-- **Contributors**: See [CONTRIBUTORS.md](CONTRIBUTORS.md) for the full list of project contributors.
-
+- **Redesign & Themes**: [@h5r5](https://github.com/h5r5)
+- See [CONTRIBUTORS.md](CONTRIBUTORS.md) and [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
